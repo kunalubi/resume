@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kunal Jain | Full-Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Kunal Jain">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- HERO SECTION -->
+    <section class="hero" data-aos="fade-up">
+      <div class="hero-content">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kunal Jain" class="hero-img floating">
+        <div class="hero-info">
+          <h1>Kunal Jain</h1>
+          <h2>Full-Stack Developer (PHP/Laravel, CI, React, AI Tools)</h2>
+          <p>I build scalable web applications with clean, efficient code. Passionate about creating intuitive user experiences and solving complex problems through technology.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn animate__animated animate__pulse animate__infinite animate__slower">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+            <button onclick="openModal()" class="btn btn-outline">
+              <i class="fas fa-file-alt"></i> View Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills" data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Backend Development</h3>
+          <canvas id="backendChart" height="200"></canvas>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Frontend Development</h3>
+          <canvas id="frontendChart" height="200"></canvas>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Tools & Technologies</h3>
+          <canvas id="toolsChart" height="200"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects" data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- Project cards would go here (same as your original) -->
+         <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Chat with PDF" class="project-img">
+          <div class="project-content">
+            <h3 class="project-title">Chat with PDF</h3>
+            <p class="project-desc">AI-powered document analysis tool that allows users to ask questions and get insights from uploaded PDF files.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">OpenAI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kunal-codes/chat-with-pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+                <i class="fab fa-github"></i> Code
+              </a>
+              <a href="#" class="btn" style="padding: 0.5rem 1rem;">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Library Management System" class="project-img">
+          <div class="project-content">
+            <h3 class="project-title">Library Management System</h3>
+            <p class="project-desc">Comprehensive library management solution with role-based access, inventory tracking, and reporting features.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kunal-codes/library-management" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Aptitude E-Learning Platform" class="project-img">
+          <div class="project-content">
+            <h3 class="project-title">Aptitude E-Learning Platform</h3>
+            <p class="project-desc">Interactive learning platform with quizzes, progress tracking, and personalized recommendations.</p>
+            <div class="project-tech">
+              <span class="tech-tag">CodeIgniter</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JWT</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kunal-codes/aptitude-elearning" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section" id="experience" data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+      <div class="timeline">
+        <!-- Timeline items would go here (same as your original) -->
+         <!-- Experience 1 -->
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2025 - Present</div>
+          <h3 class="timeline-title">Software Developer</h3>
+          <h4 class="timeline-subtitle">Ubitech Solutions Pvt. Ltd.</h4>
+          <p class="timeline-desc">
+            • Maintain and upgrade 50+ journal sites using OJS, CodeIgniter, and core PHP<br>
+            • Designed REST APIs & React UI for e-learning platform<br>
+            • Migrated legacy modules to modern frameworks, improving performance by 25%<br>
+            • Implemented Docker-based development environments
+          </p>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2024 - Dec 2024</div>
+          <h3 class="timeline-title">Intern → Software Developer</h3>
+          <h4 class="timeline-subtitle">Sequence 256 Technowave Pvt. Ltd.</h4>
+          <p class="timeline-desc">
+            • Developed AI-powered document analysis tool (Chat with PDF)<br>
+            • Led development of Library Management System with Laravel<br>
+            • Implemented Git workflow, reducing merge conflicts by 40%<br>
+            • Created deployment documentation for Hostinger/cPanel environments
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education" data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="timeline">
+        <!-- Timeline items would go here (same as your original) -->
+         <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2024</div>
+          <h3 class="timeline-title">B.Tech in Automobile Engineering</h3>
+          <h4 class="timeline-subtitle">MITS (RGPV University, Bhopal)</h4>
+          <p class="timeline-desc">
+            • Graduated with 7.5 CGPA<br>
+            • Coursework in programming, data structures, and algorithms<br>
+            • Active participant in technical workshops and coding competitions
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact" data-aos="fade-up">
+      <h2 class="section-title"><i class="fas fa-envelope"></i> Get In Touch</h2>
+      <!-- Contact content would go here (same as your original) -->
+       <div class="contact-grid">
+        <div class="contact-card" data-aos="fade-up">
+          <h3 class="contact-title"><i class="fas fa-envelope"></i> Email</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:kunaljaincool830@gmail.com">kunaljaincool830@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="contact-title"><i class="fas fa-phone"></i> Phone</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="tel:+918305142915">+91 8305142915</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="contact-title"><i class="fab fa-linkedin"></i> LinkedIn</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="https://linkedin.com/in/kunal-jain" target="_blank">linkedin.com/in/kunal-jain</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="contact-title"><i class="fab fa-github"></i> GitHub</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="https://github.com/kunal-codes" target="_blank">github.com/kunal-codes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info" data-aos="fade-up">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Let's Connect</h3>
+          <p style="margin-bottom: 1.5rem; color: var(--text-light);">Feel free to reach out for collaboration or just to say hello! I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+          
+          <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <a href="https://linkedin.com/in/kunal-jain" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/kunal-codes" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem;">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Send Me a Message</h3>
+          <form id="contactForm">
+            <div id="formAlert" class="alert" style="display: none;"></div>
+            
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- RESUME MODAL -->
+  <div class="modal" id="resumeModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <div class="resume-content">
+        <!-- Resume content would go here (same as your original) -->
+           <div class="resume-header">
+          <h1>KUNAL JAIN</h1>
+          <p>Full-Stack Developer (PHP/Laravel, CI, React, AI Tools)</p>
+          <p>Email: kunaljaincool830@gmail.com | Phone: +91-8305142915</p>
+          <p>LinkedIn: linkedin.com/in/kunal-jain | GitHub: github.com/kunal-codes</p>
+        </div>
+        
+        <div class="resume-section">
+          <h2>PROFESSIONAL SUMMARY</h2>
+          <p>Full-stack developer with expertise in PHP/Laravel and CodeIgniter, plus experience with React and AI/LLM technologies. Proven track record of delivering e-learning platforms and document-analysis tools while improving system performance and developer workflows.</p>
+        </div>
+        
+        <div class="resume-section">
+          <h2>TECHNICAL SKILLS</h2>
+          <div class="skills-container">
+            <div class="skill-category">
+              <h4>Backend</h4>
+              <ul>
+                <li>• PHP (Laravel, CodeIgniter)</li>
+                <li>• Python (Flask, Streamlit)</li>
+                <li>• MySQL, MongoDB</li>
+                <li>• REST APIs, JWT</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>Frontend</h4>
+              <ul>
+                <li>• JavaScript, TypeScript</li>
+                <li>• React, jQuery</li>
+                <li>• HTML5, CSS3</li>
+                <li>• Bootstrap, Tailwind</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h4>DevOps & Tools</h4>
+              <ul>
+                <li>• Git, GitHub</li>
+                <li>• Docker</li>
+                <li>• AWS (EC2, Lightsail)</li>
+                <li>• CI/CD Pipelines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="resume-section">
+          <h2>PROFESSIONAL EXPERIENCE</h2>
+          
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Software Developer</span>
+              <span>Jan 2025 - Present</span>
+            </div>
+            <div class="resume-item-subtitle">Ubitech Solutions Pvt. Ltd.</div>
+            <ul class="resume-item-list">
+              <li>Maintain and upgrade 50+ journal sites using Open Journal Systems (OJS), CodeIgniter 3/4, and core PHP</li>
+              <li>Designed and implemented REST APIs for "Aptitude" e-learning platform with React frontend</li>
+              <li>Migrated legacy modules to CodeIgniter 4, improving performance by 25%</li>
+              <li>Established Docker-based development environment and GitHub Actions CI pipeline</li>
+            </ul>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">Software Developer (Intern to Full-time)</span>
+              <span>Jan 2024 - Dec 2024</span>
+            </div>
+            <div class="resume-item-subtitle">Sequence 256 Technowave Pvt. Ltd.</div>
+            <ul class="resume-item-list">
+              <li>Developed "Chat with PDF" tool using Streamlit, LangChain, and OpenAI API during internship</li>
+              <li>Led development of Library Management System with Laravel, implementing multi-role authentication</li>
+              <li>Championed Git workflow adoption, reducing merge conflicts by 40%</li>
+              <li>Created deployment documentation for Hostinger/cPanel environments</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="resume-section">
+          <h2>EDUCATION</h2>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <span class="resume-item-title">B.Tech in Automobile Engineering</span>
+              <span>2020 - 2024</span>
+            </div>
+            <div class="resume-item-subtitle">MITS (RGPV University, Bhopal)</div>
+            <ul class="resume-item-list">
+              <li>Graduated with 7.5 CGPA</li>
+              <li>Coursework in programming, data structures, and algorithms</li>
+              <li>Active participant in technical workshops and coding competitions</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="resume-section">
+          <h2>PROJECTS</h2>
+          <ul class="resume-item-list">
+            <li><strong>Chat with PDF:</strong> AI document analysis tool (Python, Streamlit, LangChain, OpenAI)</li>
+            <li><strong>Library Management System:</strong> Multi-role system with reporting (Laravel, MySQL, Bootstrap)</li>
+            <li><strong>Aptitude E-Learning Platform:</strong> Interactive learning with quizzes (CodeIgniter, React, JWT)</li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn" onclick="downloadResume()" style="margin-top: 1rem;">
+        <i class="fas fa-download"></i> Download PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>
