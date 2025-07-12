@@ -280,3 +280,38 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize charts
   initCharts();
 });
+
+document.addEventListener("keydown", function (event) {
+    // Normalize key to uppercase for consistency
+    const key = event.key.toUpperCase();
+
+    // Block F12
+    if (key === "F12") {
+        event.preventDefault();
+        return false;
+    }
+
+    // Block Ctrl + Shift + I / J / C
+    if (event.ctrlKey && event.shiftKey && (key === "I" || key === "J" || key === "C")) {
+        event.preventDefault();
+        return false;
+    }
+
+    // Block Ctrl + U
+    if (event.ctrlKey && key === "U") {
+        event.preventDefault();
+        return false;
+    }
+
+    // Block Ctrl + Shift or Ctrl + Alt in general (optional catch-all)
+    if (event.ctrlKey && (event.shiftKey || event.altKey)) {
+        event.preventDefault();
+        return false;
+    }
+});
+
+// Block right-click context menu
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    return false;
+});
